@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>upload demo</title>
+    <meta charset="UTF-8">
+    <title>upload demo</title>
 </head>
 <?php
 if ($_FILES) {
@@ -21,15 +21,14 @@ if ($_FILES) {
             $target_file = "./upload_files/" . $fname;
             move_uploaded_file($file1['tmp_name'], $target_file);
         }
-
     }
 }
 ?>
 <body>
-	<form action="" method="post" enctype="multipart/form-data">
-		<input type="file" name="file1"><br><br>
-		<input type="file" name="file3[]"><br><br>
-		<input type="submit" value="提交">
-	</form>
+    <form action="" method="post" enctype="multipart/form-data">
+        <input type="file" name="file1"><br><br>
+        <input type="file" name="file3[]"><br><br>
+        <input type="submit" value="提交">
+    </form>
 </body>
 </html>
